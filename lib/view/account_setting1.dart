@@ -30,7 +30,7 @@ class _AccountSetting1PageState extends State<AccountSetting1Page> {
                   backgroundColor: Colors.grey,
                   valueColor: new AlwaysStoppedAnimation<Color>(Colors.redAccent),
                   minHeight: 10,
-                  value: _progress,
+                  value: 0,
                 ),
               ),
               ElevatedButton(
@@ -40,13 +40,13 @@ class _AccountSetting1PageState extends State<AccountSetting1Page> {
                     context,
                     MaterialPageRoute(builder: (context) => AccountSetting2Page()),
                   );
-                  setState(() {
-                    if (_progress == 1.0) {
-                      _progress = 0;
-                    } else {
-                      _progress += 0.2;
-                    }
-                  });
+                  // setState(() {
+                  //   if (_progress == 1.0) {
+                  //     _progress = 0;
+                  //   } else {
+                  //     _progress += 0.2;
+                  //   }
+                  // });
                 },
               ),
             ],

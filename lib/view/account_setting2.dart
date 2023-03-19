@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:linear_progress_indicator/view/account_setting3.dart';
 
 class AccountSetting2Page extends StatefulWidget {
   const AccountSetting2Page({super.key});
@@ -29,23 +30,23 @@ class _AccountSetting2PageState extends State<AccountSetting2Page> {
                   backgroundColor: Colors.grey,
                   valueColor: new AlwaysStoppedAnimation<Color>(Colors.redAccent),
                   minHeight: 10,
-                  value: _progress,
+                  value: 0.2,
                 ),
               ),
               ElevatedButton(
                 child: Text('次へ'),
                 onPressed: () {
-                  // Navigator.push(
-                  //   context,
-                  //   MaterialPageRoute(builder: (context) => AccountSetting3()),
-                  // );
-                  setState(() {
-                    if (_progress == 1.0) {
-                      _progress = 0;
-                    } else {
-                      _progress += 0.2;
-                    }
-                  });
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => AccountSetting3Page()),
+                  );
+                  // setState(() {
+                  //   if (_progress == 1.0) {
+                  //     _progress = 0;
+                  //   } else {
+                  //     _progress += 0.2;
+                  //   }
+                  // });
                 },
               ),
             ],
